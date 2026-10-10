@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.login-container {
+    height: 100vh;
+    padding: 0;
+}
+
+.row.m-0 {
+    height: 100%;
+}
+
+.image-side {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: inset -10px 0 20px rgba(0,0,0,0.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(200, 35, 51, 0.85) 0%, rgba(100, 0, 0, 0.95) 100%);
+    z-index: 1;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+    right: 10%;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.image-text h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.image-text p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.form-side {
+    background-color: #fbfbfb;
+}
+
+.login-card {
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.login-card:hover {
+    box-shadow: 0 20px 45px rgba(220, 53, 69, 0.12);
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1.5px solid #e2e8f0;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 4px rgba(220, 53, 69, 0.15);
+    border-color: #dc3545;
+}
+
+.form-floating label {
+    color: #64748b;
+    padding-left: 1.25rem;
+}
+
+.btn-login {
+    border-radius: 10px;
+    background: linear-gradient(45deg, #e53e3e, #c53030);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(229, 62, 62, 0.4);
+    background: linear-gradient(45deg, #c53030, #9b2c2c);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.shake-animation {
+    animation: shake 0.4s ease-in-out;
+}
